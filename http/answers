@@ -10,9 +10,9 @@ auto eth1
 iface eth1 inet dhcp
 "
 DNSOPTS="-n 8.8.8.8"
-TIMEZONEOPTS="-z Japan"
+TIMEZONEOPTS="-z UTC"
 PROXYOPTS="none"
-APKREPOSOPTS="http://mirrors.centarra.com/alpine/v3.2/main"
+APKREPOSOPTS="http://dl-5.alpinelinux.org/alpine/v3.2/main"
 SSHDOPTS="-c openssh"
 NTPOPTS="-c none"
 DISKOPTS="-m sys /dev/sda"
