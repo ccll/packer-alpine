@@ -42,15 +42,20 @@
         "ethernet1.virtualDev": "vmxnet3",
         "ethernet1.connectionType": "nat"
       },
+      "boot_wait": "20s",
       "boot_command": [
-        "root<enter><wait>",
+        "root<enter><wait><wait><wait>",
         "ifconfig eth0 up && udhcpc -i eth0<enter><wait5>",
         "wget http://{{ .HTTPIP }}:{{ .HTTPPort }}/answers<enter><wait>",
         "setup-alpine -f answers<enter><wait10>",
         "alpine<enter><wait>",
         "alpine<enter><wait10>",
         "y<enter>",
-        "<wait10><wait10><wait10>",
+        "<wait10><wait10><wait10><wait10><wait10><wait10>",
+        "<wait10><wait10><wait10><wait10><wait10><wait10>",
+        "<wait10><wait10><wait10><wait10><wait10><wait10>",
+        "<wait10><wait10><wait10><wait10><wait10><wait10>",
+        "<wait10><wait10><wait10><wait10><wait10><wait10>",
         "/etc/init.d/sshd stop<enter><wait>",
         "eject -r<enter>",
         "reboot<enter>"
